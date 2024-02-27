@@ -1,4 +1,4 @@
-# Model O Wireless (mow)
+# Model D minus Wireless (mow)
 Cross platform CLI for configuring Glorious Model O Wireless.
 
 ## Goal
@@ -62,6 +62,22 @@ Another issue is that the `hidapi` abstraction that I'm currently using is a bit
 It is a Rust (Cargo) project, so just run `cargo build --release` in the root folder, create a symlink somewhere in your `PATH`, and you should be good to go. The CLI has built in `--help`, so use that to understand usage.
 
 I'll look into making it more easily available at some point, maybe through `brew`, `apt-get` etc., though I might add support for more devices and have to change the project's name before then.
+
+### Macbook M1  
+Install Rust compiler with brew:
+
+`brew install rust`
+
+from main folder of this repo, compile with:
+
+`cargo build --release`
+
+binary will be placed on /target/release/mow
+
+
+Example of usage:
+`./target/release/mow report battery`
+
 
 ### Arch (thanks, [crstian19](https://github.com/crstian19))
 On Arch linux, you can install this from [AUR](https://aur.archlinux.org) with `paru -S mow-git`.
